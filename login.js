@@ -65,6 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Simulate login (in a real app, this would be an API call)
     if (email && password) {
+      // Store user info in localStorage
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          email: email,
+          isLoggedIn: true,
+        }),
+      )
+
       // Show success toast
       toastTitle.textContent = "ورود موفق"
       toastMessage.textContent = "به زود کوک خوش آمدید!"
@@ -72,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Redirect after 2 seconds
       setTimeout(() => {
-        window.location.href = "index.html"
+        window.location.href = "https://zodcook.github.io/home/#"
       }, 2000)
     }
   })
@@ -96,15 +105,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Simulate registration (in a real app, this would be an API call)
     if (firstName && lastName && email && password) {
+      // Store user info in localStorage
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          isLoggedIn: true,
+        }),
+      )
+
       // Show success toast
       toastTitle.textContent = "ثبت نام موفق"
       toastMessage.textContent = "حساب کاربری شما با موفقیت ایجاد شد."
       toast.classList.add("show")
 
-      // Switch to login tab after 2 seconds
+      // Redirect to home page after 2 seconds
       setTimeout(() => {
-        tabs[0].click()
-        registerForm.reset()
+        window.location.href = "https://zodcook.github.io/home/#"
       }, 2000)
     }
   })

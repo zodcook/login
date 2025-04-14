@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود / ثبت نام | زود کوک</title>
+    <meta name="description" content="ورود به حساب کاربری یا ثبت نام در سایت زود کوک">
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="back-button">
+                <i data-feather="arrow-right"></i>
+                <span>بازگشت به صفحه اصلی</span>
+            </a>
+            <a href="index.html" class="logo">
+                <span class="logo-highlight">زود</span> کوک
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" data-tab="login">ورود</button>
+                        <button class="auth-tab" data-tab="register">ثبت نام</button>
+                    </div>
+
+                    <!-- Login Form -->
+                    <div class="auth-form active" id="login-form">
+                        <h2 class="auth-title">ورود به حساب کاربری</h2>
+                        <p class="auth-subtitle">اطلاعات حساب کاربری خود را وارد کنید</p>
+
+                        <form id="login-form-element">
+                            <div class="form-group">
+                                <label for="login-email">ایمیل</label>
+                                <div class="input-with-icon">
+                                    <i data-feather="mail"></i>
+                                    <input type="email" id="login-email" placeholder="example@email.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="password-label">
+                                    <label for="login-password">رمز عبور</label>
+                                    <a href="#" class="forgot-password">فراموشی رمز عبور</a>
+                                </div>
+                                <div class="input-with-icon">
+                                    <i data-feather="lock"></i>
+                                    <input type="password" id="login-password" required>
+                                    <button type="button" class="toggle-password">
+                                        <i data-feather="eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="remember-me">
+                                    <input type="checkbox" id="remember-me">
+                                    <label for="remember-me">مرا به خاطر بسپار</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="auth-button">ورود</button>
+                        </form>
+
+                        <div class="social-login">
+                            <p>یا ورود با</p>
+                            <div class="social-buttons">
+                                <button class="social-button google">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+                                    <span>Google</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Register Form -->
+                    <div class="auth-form" id="register-form">
+                        <h2 class="auth-title">ایجاد حساب کاربری</h2>
+                        <p class="auth-subtitle">اطلاعات خود را برای ایجاد حساب کاربری وارد کنید</p>
+
+                        <form id="register-form-element">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="register-firstname">نام</label>
+                                    <input type="text" id="register-firstname" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="register-lastname">نام خانوادگی</label>
+                                    <input type="text" id="register-lastname" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-email">ایمیل</label>
+                                <div class="input-with-icon">
+                                    <i data-feather="mail"></i>
+                                    <input type="email" id="register-email" placeholder="example@email.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-password">رمز عبور</label>
+                                <div class="input-with-icon">
+                                    <i data-feather="lock"></i>
+                                    <input type="password" id="register-password" required>
+                                    <button type="button" class="toggle-password">
+                                        <i data-feather="eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-confirm-password">تکرار رمز عبور</label>
+                                <div class="input-with-icon">
+                                    <i data-feather="lock"></i>
+                                    <input type="password" id="register-confirm-password" required>
+                                    <button type="button" class="toggle-password">
+                                        <i data-feather="eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="terms-agreement">
+                                    <input type="checkbox" id="terms-agreement" required>
+                                    <label for="terms-agreement">
+                                        <a href="#">قوانین و مقررات</a> را مطالعه کرده و می‌پذیرم
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="auth-button">ثبت نام</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="current-year"></span> زود کوک. تمامی حقوق محفوظ است.</p>
+            <div class="footer-links">
+                <a href="#">قوانین و مقررات</a>
+                <a href="#">حریم خصوصی</a>
+                <a href="#">تماس با ما</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon">
+            <i data-feather="check-circle"></i>
+        </div>
+        <div class="toast-content">
+            <p class="toast-title">عملیات موفق</p>
+            <p class="toast-message">ورود با موفقیت انجام شد.</p>
+        </div>
+        <button class="toast-close">&times;</button>
+    </div>
+
+    <script src="login.js"></script>
+    <script>
+        // Initialize Feather icons
+        feather.replace();
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
